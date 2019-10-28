@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../../styles/viewStyles/index.scss">
-  <title>Index</title>
+  <% include ../partials/head %>
 </head>
 <body>
-  some straight up nonsense
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <main>
+    <section>
+      <h1>Some Title</h1>
+      <p>Welcome to something</p>
+    </section>
+    <section>
+      <h2>Variables</h2>
+      <p><%= tagline%></p>
+
+      <ul>
+        <% drinks.forEach((drink) => { %>
+          <li><%= drink.name %> - <%= drink.drunkness%></li>
+        <% });%>
+      </ul>
+      
+    </section>
+  </main>
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
 </body>
 </html>
