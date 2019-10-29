@@ -6,6 +6,7 @@ const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
+  // create variables in routes that can be passed into the ejs templates and rendered to front end
   const drinks = [
     {name: 'Bloody Mary', drunkness: 3},
     {name: 'Martini', drunkness: 5},
